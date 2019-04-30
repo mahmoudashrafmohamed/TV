@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/showCardView"
+    android:layout_width="match_parent"
+    android:layout_height="230sp"
+    android:transitionName="container"
+    android:foreground="?selectableItemBackground"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/showPosterImageView"
+            android:layout_width="match_parent"
+            android:layout_height="130sp"
+            android:background="@android:color/darker_gray"
+            android:fitsSystemWindows="true"
+            android:transitionName="posterTransition"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp">
+
+            <TextView
+                android:id="@+id/showNameTextView"
+                android:layout_above="@id/showRatingBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                tools:Text="The Big Bang Theory"/>
+
+            <RatingBar
+                style="?android:attr/ratingBarStyleSmall"
+                android:id="@+id/showRatingBar"
+                android:isIndicator="true"
+                android:stepSize="0.1"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
